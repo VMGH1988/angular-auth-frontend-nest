@@ -65,6 +65,9 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "proxyConfig": "proxy.conf.json"
+          },
           "configurations": {
             "production": {
               "buildTarget": "authApp:build:production"
@@ -72,6 +75,7 @@
             "development": {
               "buildTarget": "authApp:build:development"
             }
+
           },
           "defaultConfiguration": "development"
         },

@@ -1,0 +1,40 @@
+<div *ngIf="banned" class="container-login100" style="background-color: #1a87ff; padding:0px">
+
+  <nav class="navbar navbar-expand-lg col-12 sticky-top"  style="background-color: #6F49F2">
+    <div class="container-fluid d-flex justify-content-betwen col-7">
+    <img src="../../../../assets/images/logo1.jpg" alt=""class=" rounded-circle" style=" width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Redondea completamente la imagen */
+    object-fit: cover;">
+    <h3>Bienvenido AemeTrack-én: {{user()?.name}}</h3>
+  </div>
+    <div class="container-fluid d-flex justify-content-end flex-grow-1">
+      <button class="btn btn-dark me-2" *ngIf="showButton3" routerLink="/dashboard/Sadmin">Administración</button>
+      <button class="btn btn-dark me-2" *ngIf="showButton" routerLink="/dashboard/admin">Mi Perfil</button>
+      <button class="btn btn-dark me-2" *ngIf="showButton2" routerLink="/dashboard/user">Volver</button>
+      <button class="btn btn-dark" type="submit" (click)="onLogout()">Cerrar Sesión</button>
+
+    </div>
+  </nav>
+
+
+
+  <div class="col-12">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>
+
+<div class="container-fluid d-flex align-items-center justify-content-center vh-100" *ngIf="!banned" #bannedDiv style="background-color: #1a87ff; color: black">
+  <div class="row">
+    <div class="col-md-6">
+      <img src="../../../../assets/images/BANEADO.png" alt="" class="img-fluid">
+    </div>
+    <div class="col-md-6">
+      <h4>Ha sido baneado, en {{contador}} segundos será devuelto al login</h4>
+    </div>
+  </div>
+</div>
+<div class="col-12 text-center" style="background-color: black; color:white; position:fixed;bottom:0">
+  footer
+</div>

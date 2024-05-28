@@ -1,0 +1,62 @@
+
+<div *ngIf="nombre" class="container my-8   bg-light rounded w-50" >
+  <h4 class="text-center">Datos Generados por Aemet para {{ nombre }}</h4>
+  <div class="row justify-content-center">
+    <div class="col-md-6 text-center">
+
+      <ul class="list-group list-group-flush">
+        <li *ngFor="let detalle of detalles" class="list-group-item" >
+          Estado del cielo:
+          <span class="d-inline-flex align-items-center">
+
+            {{detalle.prediccion.dia[1].estadoCielo[1].descripcion}}
+
+          </span>
+        </li>
+
+        <li *ngFor="let detalle of detalles" class="list-group-item">
+          Humedad Relativa Mínima:
+          <span class="d-inline-flex align-items-center">
+            <i class="bi bi-droplet-fill me-2"></i>
+            {{detalle.prediccion.dia[0].humedadRelativa.minima}}%
+          </span>
+        </li>
+        <li *ngFor="let detalle of detalles" class="list-group-item">
+          Humedad Relativa Máxima:
+          <span class="d-inline-flex align-items-center">
+            <i class="bi bi-droplet-fill me-2"></i>
+            {{detalle.prediccion.dia[0].humedadRelativa.maxima}}%
+          </span>
+        </li>
+        <li *ngFor="let detalle of detalles" [ngClass]="{
+            'temperatura-baja': detalle.prediccion.dia[0].temperatura.minima < 15,
+            'temperatura-media': detalle.prediccion.dia[0].temperatura.minima >= 15 && detalle.prediccion.dia[1].temperatura.minima <= 30,
+            'temperatura-alta': detalle.prediccion.dia[0].temperatura.minima > 30 && detalle.prediccion.dia[1].temperatura.minima <= 45,
+            'temperatura-muy-alta': detalle.prediccion.dia[0].temperatura.minima > 45
+          }">
+          Temperatura Mínima:
+          <span class="d-inline-flex align-items-center">
+            <i class="bi bi-thermometer me-2"></i>
+            {{detalle.prediccion.dia[0].temperatura.minima}}°C
+          </span>
+        </li>
+        <li *ngFor="let detalle of detalles" [ngClass]="{
+            'temperatura-baja': detalle.prediccion.dia[0].temperatura.maxima < 15,
+            'temperatura-media': detalle.prediccion.dia[0].temperatura.maxima >= 15 && detalle.prediccion.dia[1].temperatura.maxima <= 30,
+            'temperatura-alta': detalle.prediccion.dia[0].temperatura.maxima > 30 && detalle.prediccion.dia[1].temperatura.maxima <= 45,
+            'temperatura-muy-alta': detalle.prediccion.dia[0].temperatura.maxima > 45
+          }">
+          Temperatura Máxima:
+          <span class="d-inline-flex align-items-center">
+            <i class="bi bi-thermometer me-2"></i>
+            {{detalle.prediccion.dia[0].temperatura.maxima}}°C
+          </span>
+
+        </li>
+
+      </ul>
+
+      <br>
+    </div>
+  </div>
+</div>

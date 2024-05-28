@@ -1,0 +1,30 @@
+/* Temperatura menor a 15°C - Texto azul */
+.temperatura-baja {
+  color: blue;
+  font-weight: bold;
+}
+
+/* Temperatura entre 15 y 30°C - Texto amarillo */
+.temperatura-media {
+  color: rgb(218, 241, 7);
+  font-weight: bold;
+}
+
+/* Temperatura entre 31 y 45°C - Texto rojo */
+.temperatura-alta {
+  color: red;
+  font-weight: bold;
+}
+
+/* Temperatura mayor a 45°C - Texto rojo oscuro */
+.temperatura-muy-alta {
+  color: rgb(170, 7, 83);
+  font-weight: bold;
+}
+
+
+.list-group-item {
+  background-color: transparent;
+  font-weight: bold;
+
+}

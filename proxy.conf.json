@@ -1,0 +1,13 @@
+{
+  "/especifica/*": {
+    "target": "https://opendata.aemet.es/opendata/api/prediccion/especifica/municipio/diaria/",
+    "secure": false,
+    "changeOrigin":true,
+
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/especifica/(.*)": "/$1"
+    }
+
+  }
+}

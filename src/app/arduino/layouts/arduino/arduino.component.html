@@ -1,0 +1,36 @@
+<div class="d-flex align-items-center justify-content-between" style="background-image: url('../../../../assets/images/3WLl.gif'); background-size:cover; ">
+
+
+<ngx-charts-area-chart
+  [view]="view"
+
+  [legend]="legend"
+  [showXAxisLabel]="showXAxisLabel"
+  [showYAxisLabel]="showYAxisLabel"
+  [xAxis]="xAxis"
+  [yAxis]="yAxis"
+  [xAxisLabel]="xAxisLabel"
+  [yAxisLabel]="yAxisLabel"
+  [timeline]="timeline"
+  [results]="single"
+  (select)="onSelect($event)">
+</ngx-charts-area-chart>
+
+<ngx-charts-area-chart
+  [view]="view"
+
+  [legend]="legend"
+  [showXAxisLabel]="showXAxisLabel"
+  [showYAxisLabel]="showYAxisLabel"
+  [xAxis]="xAxis"
+  [yAxis]="yAxis"
+  [xAxisLabel]="xAxisLabel"
+  [yAxisLabel]="yAxisLabel2"
+  [timeline]="timeline"
+  [results]="single"
+  (select)="onSelect($event)">
+</ngx-charts-area-chart>
+</div>
+<button (click)="onRandomData()">
+  Random Data
+</button>
