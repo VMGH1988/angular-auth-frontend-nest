@@ -9,6 +9,7 @@ import { MunicipiosModule } from './municipios/municipios.module';
 import { AemetModule } from './aemet/aemet.module';
 import { ArduinoModule } from './arduino/arduino.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ContactoModule } from './contacto/contacto.module';
 
 
 
@@ -24,7 +25,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AemetModule,
     MunicipiosModule,
     ArduinoModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ContactoModule,
 
 
   ],

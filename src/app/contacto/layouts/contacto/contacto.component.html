@@ -1,0 +1,44 @@
+<div class="container mt-5 vh-100">
+  <h1 class="text-center mb-3">Contacto</h1>
+  <p class="lead mb-4 text-center" style="color:black">
+    Si quieres aportar alguna mejora, reportar un problema o necesitas alguna información, ponte en contacto con el administrador.
+  </p>
+
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <form [formGroup]="contactoForm" (ngSubmit)="onSubmit()" class="card">
+        <div class="card-body">
+          <h5 class="card-title text-center">Envíanos un mensaje</h5>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" formControlName="nombre">
+                <div *ngIf="contactoForm.controls['nombre'].invalid && contactoForm.controls['nombre'].touched" style="color:red">
+                  Nombre requerido.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="asunto" class="form-label">Asunto:</label>
+                <input type="text" class="form-control" id="asunto" formControlName="asunto">
+                <div *ngIf="contactoForm.controls['asunto'].invalid && contactoForm.controls['asunto'].touched" style="color:red">
+                  Asunto requerido.
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label for="contenido" class="form-label">Contenido:</label>
+                <textarea class="form-control" id="contenido" rows="3" formControlName="contenido"></textarea>
+                <div *ngIf="contactoForm.controls['contenido'].invalid && contactoForm.controls['contenido'].touched" style="color:red">
+                  Contenido requerido.
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">Enviar</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

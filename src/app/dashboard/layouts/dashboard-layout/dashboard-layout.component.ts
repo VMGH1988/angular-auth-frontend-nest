@@ -46,8 +46,14 @@ export class DashboardLayoutComponent {
     return this.router.url!== '/dashboard/user';
 
   }
+
+
   get showButton3(): boolean {
-    return this.user()?.roles?.includes('admin') || false;
+    return this.router.url!== '/dashboard/Sadmin' && this.user()?.roles?.includes('admin') || false;
+
+  }
+  get showButton4(): boolean {
+    return this.router.url!== '/dashboard/contacto';
   }
 
   onLogout() {

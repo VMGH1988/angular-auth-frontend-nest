@@ -10,6 +10,7 @@ import { MunicipiosModule } from '../municipios/municipios.module';
 import { AemetModule } from '../aemet/aemet.module';
 import { ArduinoModule } from '../arduino/arduino.module';
 import { SuperAdminComponent } from './layouts/pages/super-admin/super-admin.component';
+import { ContactoModule } from '../contacto/contacto.module';
 
 
 
@@ -28,7 +29,8 @@ import { SuperAdminComponent } from './layouts/pages/super-admin/super-admin.com
     ReactiveFormsModule,
     AemetModule,
     MunicipiosModule,
-    ArduinoModule
+    ArduinoModule,
+    ContactoModule,
   ]
 })
 export class DashboardModule { }

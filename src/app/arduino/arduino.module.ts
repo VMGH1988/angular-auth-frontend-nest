@@ -6,9 +6,10 @@ import { FormsModule } from '@angular/forms';
 
 
 
+
 @NgModule({
   declarations: [
-    ArduinoComponent
+    ArduinoComponent,
   ],
   imports: [
     CommonModule,
@@ -18,7 +19,7 @@ import { FormsModule } from '@angular/forms';
 
   ],
   exports:[
-    ArduinoComponent
+    ArduinoComponent,
   ]
 })
 export class ArduinoModule { }

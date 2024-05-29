@@ -41,11 +41,7 @@ export class WeatherComponent implements OnInit{
         });
       });
 
-
-
-
     });
-
 
   }
 

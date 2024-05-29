@@ -4,7 +4,7 @@
     <div class="container-fluid d-flex justify-content-betwen col-7">
     <img src="../../../../assets/images/logo1.jpg" alt=""class=" rounded-circle" style=" width: 100px;
     height: 100px;
-    border-radius: 50%; /* Redondea completamente la imagen */
+    border-radius: 50%;
     object-fit: cover;">
     <h3>Bienvenido AemeTrack-én: {{user()?.name}}</h3>
   </div>
@@ -12,6 +12,7 @@
       <button class="btn btn-dark me-2" *ngIf="showButton3" routerLink="/dashboard/Sadmin">Administración</button>
       <button class="btn btn-dark me-2" *ngIf="showButton" routerLink="/dashboard/admin">Mi Perfil</button>
       <button class="btn btn-dark me-2" *ngIf="showButton2" routerLink="/dashboard/user">Volver</button>
+      <button class="btn btn-dark me-2" *ngIf="showButton4" routerLink="/dashboard/contacto">Contacto</button>
       <button class="btn btn-dark" type="submit" (click)="onLogout()">Cerrar Sesión</button>
 
     </div>
